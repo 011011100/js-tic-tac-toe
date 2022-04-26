@@ -7,7 +7,7 @@ var app = new Vue({
     },
     methods: {
         chessfun: function () {
-            
+
             this.chess = !this.chess
             if (this.chess) {
                 this.message = "现在正在下棋的是：O"
@@ -15,7 +15,7 @@ var app = new Vue({
                 this.message = '现在正在下棋的是：X'
             }
         },
-        winer: function(massage){
+        winer: function (massage) {
             this.message = massage
         }
 
@@ -27,7 +27,7 @@ class tbfun {
         this.message = message
     }
 
-    
+
 
     playChess() {
         if (app.chess) {
@@ -39,17 +39,23 @@ class tbfun {
         }
     }
 
-    chackWiner(){
-        if (td1_1.message == td1_2.message && td1_2.message == td1_3.message && td1_1.message != '' && td1_2.message != '' && td1_3.message != ''){
-            app.winer("胜利者是："+ td1_1.message)
-        }else if(td2_1.message == td2_2.message && td2_2.message == td2_3.message && td2_1.message != '' && td2_2.message != '' && td2_3.message != ''){
-            app.winer("胜利者是："+ td2_1.message)
-        }else if(td3_1.message == td3_2.message && td3_2.message == td3_3.message && td3_1.message != '' && td3_2.message != '' && td3_3.message != ''){
-            app.winer("胜利者是："+ td3_1.message)
-        }else if(td1_1.message == td2_2.message && td2_2.message == td3_3.message && td1_1.message != '' && td2_2.message != '' && td3_3.message != ''){
-            app.winer("胜利者是："+ td2_2.message)
-        }else if(td1_3.message == td2_2.message && td2_2.message == td3_1.message && td1_3.message != '' && td2_2.message != '' && td3_1.message != ''){
-            app.winer("胜利者是："+ td2_2.message)
+    chackWiner() {
+        if (td1_1.message == td1_2.message && td1_2.message == td1_3.message && td1_1.message != '' && td1_2.message != '' && td1_3.message != '') {
+            app.winer("胜利者是：" + td1_1.message)
+        } else if (td2_1.message == td2_2.message && td2_2.message == td2_3.message && td2_1.message != '' && td2_2.message != '' && td2_3.message != '') {
+            app.winer("胜利者是：" + td2_1.message)
+        } else if (td3_1.message == td3_2.message && td3_2.message == td3_3.message && td3_1.message != '' && td3_2.message != '' && td3_3.message != '') {
+            app.winer("胜利者是：" + td3_1.message)
+        } else if (td1_1.message == td2_1.message && td3_1.message == td2_1.message && td1_1.message != '' && td2_1.message != '' && td3_1.message != '') {
+            app.winer("胜利者是：" + td1_1.message)
+        } else if (td2_2.message == td1_2.message && td2_2.message == td3_2.message && td3_2.message != '' && td1_2.message != '' && td2_2.message != '') {
+            app.winer("胜利者是：" + td2_1.message)
+        } else if (td3_3.message == td2_3.message && td2_3.message == td1_3.message && td1_3.message != '' && td2_3.message != '' && td3_3.message != '') {
+            app.winer("胜利者是：" + td3_1.message)
+        } else if (td1_1.message == td2_2.message && td2_2.message == td3_3.message && td1_1.message != '' && td2_2.message != '' && td3_3.message != '') {
+            app.winer("胜利者是：" + td2_2.message)
+        } else if (td1_3.message == td2_2.message && td2_2.message == td3_1.message && td1_3.message != '' && td2_2.message != '' && td3_1.message != '') {
+            app.winer("胜利者是：" + td2_2.message)
         }
     }
 }
