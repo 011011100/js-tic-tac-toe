@@ -1,0 +1,22 @@
+#bodyDiv
+{
+    width: 270px;
+    height: 270px;
+    border: 1px,solid ,black;
+}
+
+table
+{
+    width: 270px;
+    height: 270px;
+    border: 1px,solid ,black;
+}
+
+td
+{
+    width: 88px;
+    height: 88px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px,solid ,black;
+}
